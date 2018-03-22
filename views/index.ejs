@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login and Register</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="" id="loginModal">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3>Have an Account?</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="well">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+                        <li><a href="#create" data-toggle="tab">Create Account</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane active in" id="login">
+                        <form class="form-horizontal" action='/login' method="POST">
+                            <fieldset>
+                            <div id="legend">
+                                <legend class="">Login</legend>
+                            </div>    
+                            <div class="control-group">
+                                <label class="control-label">Email</label>
+                                <div class="controls">
+                                <input type="text" name="email" placeholder="" class="input-xlarge">
+                                </div>
+                            </div>
+        
+                            <div class="control-group">
+                                <label class="control-label" for="password">Password</label>
+                                <div class="controls">
+                                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                <button type="submit" class="btn btn-success">Login</button>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>                
+                        </div>
+                        <div class="tab-pane fade" id="create">
+                            <form id="tab" action='/register' method='POST'>
+                                <label>First Name</label>
+                                <input type="text" name="first_name" value="" class="input-xlarge">
+                                <label>Last Name</label>
+                                <input type="text" name="last_name" value="" class="input-xlarge">
+                                <label>Email</label>
+                                <input type="text" name="email" value="" class="input-xlarge">
+                                <label>Birthdate</label>
+                                <input type="date" name="birthdate" value="" class="input-xlarge">
+                                <label>Password</label>
+                                <input type="password" name="password" class="input-xlarge">
+                                <label>Confirm Password</label>
+                                <input type="password" name="confirm_password" class="input-xlarge">
+                            <div>
+                                <button type="submit" class="btn btn-primary">Create Account</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+    </body>
+</html>
